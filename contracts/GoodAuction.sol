@@ -1,4 +1,4 @@
-pragma solidity 0.4.19;
+pragma solidity 0.5.0;
 
 import "./AuctionInterface.sol";
 
@@ -28,7 +28,7 @@ contract GoodAuction is AuctionInterface {
 	/*  Allow users to check the amount they are owed
 		before calling withdrawRefund(). Function returns
 		amount owed.  */
-	function getMyBalance() constant external returns(uint) {
+	function getMyBalance() view external returns(uint) {
 		return refunds[msg.sender];
 	}
 
@@ -54,7 +54,7 @@ contract GoodAuction is AuctionInterface {
 		want to profit on people's mistakes.
 		How do we send people their money back?  */
 
-	function () payable {
+	function () external payable {
 		// YOUR CODE HERE
 	}
 

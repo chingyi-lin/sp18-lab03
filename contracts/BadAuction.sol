@@ -1,4 +1,4 @@
-pragma solidity 0.4.19;
+pragma solidity 0.5.0;
 
 import "./AuctionInterface.sol";
 
@@ -40,7 +40,7 @@ contract BadAuction is AuctionInterface {
 		want to profit on people's mistakes.
 		How do we send people their money back?  */
 
-	function () payable {
+	function () external payable {
 		// YOUR CODE HERE
 	}
 
